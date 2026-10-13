@@ -1,0 +1,21 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+
+# Android and Gradle build output
+build/
+**/build/
+captures/
+**/captures/
+.externalNativeBuild/
+**/.externalNativeBuild/
+.cxx/
+**/.cxx/
+
+# Android application packages
+*.apk
+*.aab

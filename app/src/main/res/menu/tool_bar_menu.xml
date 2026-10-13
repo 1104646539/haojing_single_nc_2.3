@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_count_down"
+        android:title=""
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/action_open_close_lib"
+        android:title="开关盖"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/action_in_out_card"
+        android:title="进出卡"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/action_operate_procedure"
+        android:title="操作流程"
+        app:showAsAction="never"
+        />
+</menu>

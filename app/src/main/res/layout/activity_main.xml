@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#3D8DCF"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:id="@+id/tv_title"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_pesticide_test"
+                style="?android:attr/borderlessButtonStyle"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="农药残留检测"
+                android:visibility="visible"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/btn_fenguang_test"
+                style="?android:attr/borderlessButtonStyle"
+                android:paddingTop="40dp"
+                android:layout_marginLeft="100dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="分光检测"
+                android:visibility="gone"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/ll"
+            android:gravity="center"
+            android:id="@+id/ll_2"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_data_manage"
+                style="?android:attr/borderlessButtonStyle"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="数据管理"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/ll_2"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_sys_setting"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_marginRight="40dp"
+                android:paddingTop="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="系统设置"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+
+    <color name="title_color">#3D8DCF</color>
+    <color name="text_black">#222222</color>
+    <color name="gray_filtrate_bg">#dddddd</color>
+    <color name="gray_click_n">#cccccc</color>
+    <color name="sky_blue">#aa0000ff</color>
+    <color name="title_normal_green">#52FF52</color>
+    <color name="white_transfrant">#7fffffff</color>
+    <color name="game_detail_text_color">#999999</color>
+    <color name="game_detail_title_nomal">#666666</color>
+    <color name="THEME_COLOR">#1582d9</color>
+    <color name="btn_baseData_background_color">#6495ED</color>
+    <color name="BACK_GROUND_COLOR">#efefef</color>
+    <color name="unfocused">#ffffffff</color>
+    <color name="pressed">#fff22fff</color>
+    <color name="selected">#fff33fff</color>
+    <color name="focused">#ffff44ff</color>
+    <color name="kprogresshud_default_color">#b1000000</color>
+    <color name="kprogresshud_grey_color">#449E9E9E</color>
+
+
+</resources>

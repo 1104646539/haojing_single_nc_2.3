@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/check_project_linadnround_name"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="检测流水号" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_start"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="检测单位" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_end"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="检验员" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_ct"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="试剂厂商" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_ct_width"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="检测项目" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_xian"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="限量标准" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_value"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="临界值" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_k"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="检测值" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_b"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="样品浓度" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_x"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="样品浓度" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_p"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="样品浓度" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/check_project_linadnround_long"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:text="检测结果" />
+
+</LinearLayout>

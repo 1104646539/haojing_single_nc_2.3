@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BACK_GROUND_COLOR" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="检测项目"
+        android:textColor="#ffffff"
+        style="@style/baseData_title_style1" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dp" >
+
+        <TableRow>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickShowJin"
+                android:text="显线金标"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickHiddenJIn"
+                android:text="消线金标"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickBiJin"
+                android:text="比线金标"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickRound"
+                android:text="圆形试纸"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickZhen"
+                android:text="正向试纸条"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickFan"
+                android:text="反向试纸条"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickBack"
+                android:text="返回"
+                android:textSize="30sp"
+                android:visibility="gone" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:text="消失金标"
+                android:textSize="30sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:text="比线金标"
+                android:textSize="30sp"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

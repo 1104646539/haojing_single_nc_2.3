@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:text="被检单位:"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_checked_org"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:paddingLeft="10dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:text="商品来源"
+        android:layout_marginLeft="20dp"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_sample_source"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

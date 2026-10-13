@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/title_color">
+        <!--<TextView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="#3D8DCF"
+            android:paddingLeft="10dp"
+            android:text="检测结果"
+            android:textColor="@android:color/white"
+            android:textSize="38sp" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_data_count"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="共查询到(0)条数据"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="36sp" />-->
+        <TextView
+            android:id="@+id/tv_data_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="共查询到(0)条数据"
+            android:textColor="@android:color/white"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/tv_statistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="统计"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb_checker"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检测人员:" />
+
+                <Spinner
+                    android:id="@+id/spn_checker"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/cb_checked_organization"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="被检单位:" />
+
+                <Spinner
+                    android:id="@+id/spn_checked_organization"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/cb_sample_name"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="样品名称:" />
+
+                <Spinner
+                    android:id="@+id/spn_sample_name"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <!--<CheckBox
+                    android:id="@+id/cb_sample_num"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="样本编号" />
+
+                <Spinner
+                    android:id="@+id/spn_sample_num"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />-->
+                <CheckBox
+                    android:id="@+id/cb_result_judge"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检测结果:" />
+
+                <Spinner
+                    android:id="@+id/spn_result_judge"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/cb_upload_state"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传状态:" />
+
+                <Spinner
+                    android:id="@+id/spn_upload_state"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/cb_sample_source"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品来源:" />
+
+                <Spinner
+                    android:id="@+id/spn_sample_source"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+
+                <CheckBox
+                    android:id="@+id/cb_test_time"
+                    style="@style/CheckBox_ResultQuery"
+                    android:textSize="28sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检测时间" />
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="200dp"
+                    android:textSize="28sp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="请选择开始日期" />
+
+                <TextView
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="100dp"
+                    android:textSize="28sp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="至" />
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:textSize="28sp"
+                    style="@style/CheckBox_ResultQuery"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="请选择结束日期" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="判定结果"
+                android:textColor="@color/text_black"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/spn_result"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_query"
+            style="@style/BtnBottom"
+            android:layout_width="150dp"
+            android:layout_weight="0"
+            android:text="查询" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <include layout="@layout/item_result" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <ListView
+                android:id="@+id/lv"
+                android:layout_width="2300dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#55cccccc"
+        android:gravity="center"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/btn_clear_data"
+            style="@style/BtnBottom"
+            android:text="清空" />
+
+        <Button
+            android:id="@+id/btn_delete_data"
+            style="@style/BtnBottom"
+            android:text="删除" />
+
+        <Button
+            android:id="@+id/btn_print"
+            style="@style/BtnBottom"
+            android:text="打印" />
+
+        <Button
+            android:id="@+id/btn_upload"
+            style="@style/BtnBottom"
+            android:text="上传" />
+
+        <Button
+            android:id="@+id/btn_export_data"
+            style="@style/BtnBottom"
+            android:text="导出"
+            android:visibility="visible" />
+
+        <!--<Button
+
+            style="@style/BtnBottom"
+            android:text="上一页" />
+
+        <Button
+
+            style="@style/BtnBottom"
+            android:text="下一页" />-->
+
+        <Button
+            android:id="@+id/btn_return"
+            style="@style/BtnBottom"
+            android:text="返回" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/card_listview_item_name"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="厂商名称" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/card_listview_item_start"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="扫描起点" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/card_listview_item_end"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="扫描终点" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/card_listview_item_ct"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="CT间距" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#e6e6e6" />
+
+    <TextView
+        android:id="@+id/card_listview_item_ct_width"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="CT峰宽" />
+
+</LinearLayout>

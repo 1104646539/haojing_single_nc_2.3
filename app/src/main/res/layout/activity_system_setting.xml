@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/title_color"
+        android:gravity="center"
+        android:text="系统设置"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_project"
+                android:layout_width="400dp"
+                android:layout_margin="50dp"
+                android:padding="40dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="检测项目"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_sample"
+                android:layout_width="400dp"
+                android:layout_margin="50dp"
+                android:padding="40dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="样品名称"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_height="wrap_content" />
+           <!-- <Button
+                android:id="@+id/btn_upload_setting"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:padding="40dp"
+                android:text="上传设置"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />-->
+
+           <!-- <Button
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:padding="40dp"
+                android:text="被检单位"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/ll"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_upload_setting"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="400dp"
+                android:layout_margin="50dp"
+                android:padding="40dp"
+                android:text="上传设置"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_id_setting"
+                android:layout_width="400dp"
+                android:layout_margin="50dp"
+                android:padding="40dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="ID设置"
+                android:textColor="@android:color/white"
+                android:textSize="58dp"
+                android:background="@drawable/btn_default1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="#00ffffff"
+            android:id="@+id/btn_debug"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</LinearLayout>

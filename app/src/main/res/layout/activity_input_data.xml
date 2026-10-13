@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/title_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="样品名称编辑"
+        android:textColor="#ffffff"
+        android:textSize="30sp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/listview"
+        android:layout_weight="1.0" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_clear_data"
+            style="@style/btn_baseData_style"
+            android:text="清空全部数据" />
+
+        <Button
+            android:id="@+id/btn_delete_data"
+            style="@style/btn_baseData_style"
+            android:text="删除选中的数据" />
+
+        <Button
+            android:id="@+id/btn_edit_data"
+            style="@style/btn_baseData_style"
+            android:text="编辑数据" />
+
+        <Button
+            android:id="@+id/btn_add_data"
+            style="@style/btn_baseData_style"
+            android:text="增加数据" />
+
+        <Button
+            android:id="@+id/btn_return"
+            style="@style/btn_baseData_style"
+            android:text="返回" />
+    </LinearLayout>
+
+</LinearLayout>

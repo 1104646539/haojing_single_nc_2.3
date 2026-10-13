@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/check_photo_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="检测图片"
+        android:textColor="#ffffff"
+        style="@style/baseData_title_style1" />
+
+    <ImageView
+        android:id="@+id/check_result_photo_img"
+        android:layout_width="match_parent"
+        android:layout_below="@id/check_photo_title"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_above="@+id/activity_check_result_bottom"
+        android:scaleType="centerInside"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+    <!--
+    </LinearLayout>
+    </HorizontalScrollView>
+    -->
+
+    <LinearLayout
+        android:id="@+id/activity_check_result_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_change_btu_shape"
+            android:drawableTop="@mipmap/back"
+            android:onClick="ClickForWord"
+            android:padding="5dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_change_btu_shape"
+            android:drawableTop="@mipmap/forrward"
+            android:onClick="ClickMoveNext"
+            android:padding="5dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_change_btu_shape"
+            android:onClick="ClickDelete"
+            android:text="删除" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_change_btu_shape"
+            android:onClick="ClickBack"
+            android:text="返回" />
+    </LinearLayout>
+
+</RelativeLayout>

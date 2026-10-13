@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/title_color"
+            android:paddingLeft="10dp"
+            android:text="分光检测"
+            android:textColor="@android:color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/title_color"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:textSize="32sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="top">
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/l1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="50dp"-->
+        <!--android:gravity="center">-->
+
+        <!--<include layout="@layout/checked_org_input" />-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="通道号"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="样品编号"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="样品名称"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="吸光度变化"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="抑制率"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="检测结果"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="被检单位"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="商品来源"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="重量（Kg）"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:focusable="true"
+            android:minHeight="70dp"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/et_sample_aisle_number"
+                style="@style/EditTextResultShow2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="B"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/et_sample_number"
+                style="@style/EditTextResultShow2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:maxLines="2"
+                android:inputType="text"
+                android:digits="@string/dis_numberaz"
+                android:focusable="true"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/et_sample_name"
+                style="@style/EditTextResultShow2"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/et_compare_value"
+                style="@style/EditTextResultShow2"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="28sp" />
+
+
+            <TextView
+                android:id="@+id/et_yzl"
+                style="@style/EditTextResultShow2"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/et_judge"
+                style="@style/EditTextResultShow2"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/et_checked_org"
+                style="@style/EditTextResultShow2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/et_sample_source"
+                style="@style/EditTextResultShow2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/et_sample_weight"
+                style="@style/EditTextResultShow2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:digits="1234567890"
+                android:focusable="true"
+                android:inputType="number"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_ac"
+            android:layout_height="wrap_content"
+            android:text="@string/contrastValue"
+            android:textSize="28sp"
+            android:textColor="@color/text_black" />
+
+        <Button
+            android:id="@+id/btn_compare"
+            style="@style/BtnBottom"
+            android:text="对照" />
+
+        <Button
+            android:id="@+id/btn_test"
+            style="@style/BtnBottom"
+            android:enabled="false"
+            android:text="检测" />
+
+        <Button
+            android:id="@+id/btn_save_record"
+            style="@style/BtnBottom"
+            android:text="保存"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_print"
+            style="@style/BtnBottom"
+            android:text="打印" />
+
+        <Button
+            android:id="@+id/btn_return"
+            style="@style/BtnBottom"
+            android:text="返回" />
+
+    </LinearLayout>
+</LinearLayout>

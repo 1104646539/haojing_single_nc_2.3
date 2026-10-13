@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IconEditText">
+        <attr name="iconSrc" format="reference" />
+        <attr name="isPassword" format="boolean" />
+        <attr name="hint" format="string" />
+        <attr name="image_width" format="dimension|enum" />
+        <attr name="image_height" format="dimension|enum" />
+        <attr name="textSize" />
+    </declare-styleable>
+
+    <declare-styleable name="MaskedEditText">
+        <attr name="mask" format="string" />
+        <attr name="notMaskedSymbol" format="string" />
+        <attr name="replacementChar" format="string" />
+        <attr name="deleteChar" format="string" />
+        <attr name="format" format="string" />
+        <attr name="maskIcon" format="reference" />
+        <attr name="maskIconColor" format="reference" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+    <declare-styleable name="AutoConintaEditText">
+        <attr name="unit" format="string"></attr>
+        <attr name="TextSize" format="dimension"></attr>
+        <attr name="TextColor" format="color"></attr>
+    </declare-styleable>
+</resources>

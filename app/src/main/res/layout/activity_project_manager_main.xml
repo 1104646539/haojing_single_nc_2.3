@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BACK_GROUND_COLOR" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="项目管理"
+        android:textColor="#ffffff"
+        style="@style/baseData_title_style1"  />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dp" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_checkunit"
+                android:layout_margin="50dp"
+                android:text="检测单位"
+                style="@style/project_manager_button_style" />
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_checker"
+                android:layout_margin="50dp"
+                android:layout_marginLeft="30dp"
+                android:text="检验员"
+                style="@style/project_manager_button_style" />
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_project"
+                android:layout_margin="50dp"
+                android:text="检测项目"
+                style="@style/project_manager_button_style" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_reagentcompany"
+                android:layout_margin="50dp"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+                android:text="试剂厂商"
+                style="@style/project_manager_button_style" />
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_checkpicture"
+                android:layout_margin="50dp"
+                android:text="检测图片"
+                style="@style/project_manager_button_style" />
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_cardcompany"
+                android:layout_margin="50dp"
+                android:layout_marginLeft="30dp"
+                android:text="试剂厂商"
+                style="@style/project_manager_button_style" />
+            <Button
+                android:id="@+id/activity_project_manager_btn_sampletype"
+                android:layout_margin="50dp"
+                android:text="样品类型"
+                style="@style/project_manager_button_style" />
+
+        </TableRow>
+
+        <TableRow>
+
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_samplename"
+                android:layout_margin="50dp"
+                android:text="样品名称"
+                style="@style/project_manager_button_style" />
+
+            <Button
+                android:id="@+id/activity_project_manager_btn_sampleunit"
+                android:layout_margin="50dp"
+                android:text="商品来源"
+                style="@style/project_manager_button_style" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

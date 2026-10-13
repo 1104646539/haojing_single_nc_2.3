@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/company_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="试剂厂商编辑"
+        android:textColor="#ffffff"
+        style="@style/baseData_title_style1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/BACK_GROUND_COLOR"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            style="@style/baseData_title_style2"
+            android:text="试剂厂商名称" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#999999" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/BACK_GROUND_COLOR"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            style="@style/baseData_title_style2"
+            android:text="试剂厂商代码" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999" />
+
+    <ListView
+        android:id="@+id/shiji_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickClear"
+            android:text="清空全部数据" />
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickDelete"
+            android:text="删除选中的数据" />
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickEdit"
+            android:text="增加编辑数据" />
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickBack"
+            android:text="返回" />
+    </LinearLayout>
+
+</LinearLayout>

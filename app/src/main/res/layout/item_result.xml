@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="2300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <!--<CheckBox
+            android:id="@+id/cb_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/cb_selector"
+            android:textSize="26sp" />
+
+        <include layout="@layout/v_spliter" />-->
+
+        <TextView
+            android:id="@+id/tv_sample_number"
+            style="@style/TextViewResultItem"
+            android:layout_weight="0.8"
+            android:text="样品编号" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_test_time"
+            style="@style/TextViewResultItem"
+            android:layout_weight="1.6"
+            android:text="检测时间" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_project"
+            style="@style/TextViewResultItem"
+            android:layout_weight="1.6"
+            android:text="检测项目" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_channel"
+            style="@style/TextViewResultItem"
+            android:layout_weight="0.8"
+            android:text="通道" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_sample_name"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="样品名称" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_test_value"
+            style="@style/TextViewResultItem"
+            android:layout_weight="1.2"
+            android:textSize="24sp"
+            android:text="抑制率/检测值" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_result_judge"
+            style="@style/TextViewResultItem"
+            android:layout_weight="1"
+            android:text="检测结果" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_bchecked_org"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:text="被检单位" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_checker"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:text="检测人员" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_check_org"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:text="检测单位" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            style="@style/TextViewResultItem"
+            android:layout_weight="1.3"
+            android:text="重量" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_sample_source"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="1.7"
+            android:text="商品来源" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_upload_state"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="上传状态" />
+
+        <include layout="@layout/v_spliter" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            style="@style/TextViewResultItem"
+            android:layout_weight="1.3"
+            android:text="检测编号"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/v_spliter"
+            android:visibility="gone" />
+
+        <!--<TextView
+            android:id="@+id/tv_project"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="1.3"
+            android:text="检测项目"
+            android:visibility="gone" />-->
+
+        <include
+            layout="@layout/v_spliter"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_xlz"
+            style="@style/TextViewResultItem"
+            android:layout_weight="0.8"
+            android:text="临界值"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/v_spliter"
+            android:visibility="gone" />
+
+
+        <!-- <TextView
+             android:id="@+id/tv_single_xlz"
+             style="@style/TextViewProjectItem"
+             android:text="样本编号"
+             android:layout_weight="1"
+             android:layout_width="0dp" />
+
+         <include layout="@layout/v_spliter"/>-->
+
+        <TextView
+            android:id="@+id/tv_standard"
+            style="@style/TextViewProjectItem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="限量标准"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/v_spliter"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

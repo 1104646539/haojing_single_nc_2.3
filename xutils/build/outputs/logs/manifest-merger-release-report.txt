@@ -1,0 +1,29 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:2:1-10:12
+	package
+		ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml
+		INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:5:5-30
+	xmlns:android
+		ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:4:5-28
+uses-sdk
+ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+	android:targetSdkVersion
+		ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:8:9-38
+		INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml
+		INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml
+		ADDED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+		INJECTED from F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BACK_GROUND_COLOR"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="功能选项"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+    android:layout_margin="50dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1.0"    
+                android:layout_margin="50dp"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickLine"
+                android:textSize="30sp"
+                android:text="样本图线" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1.0"   
+                android:layout_margin="50dp"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickNetSetting"
+                android:textSize="30sp"
+                android:text="定时设置" />
+        </LinearLayout>
+        
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"    
+                android:layout_margin="50dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickResult"
+                android:textSize="30sp"
+                android:text="查询结果" />
+           
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1.0"    
+                android:layout_margin="50dp"
+                android:background="@drawable/main_change_btu_shape"
+                android:onClick="ClickBack"
+                android:textSize="30sp"
+                android:text="返回" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

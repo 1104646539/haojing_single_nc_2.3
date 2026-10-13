@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BACK_GROUND_COLOR"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="样品检测"
+        android:textColor="#ffffff"
+        android:textSize="28sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.0" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="检测单位:" />
+
+                    <Spinner
+                        android:id="@+id/check_company_spinner"
+                        style="@style/checkactivity_spinner_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="检验员:" />
+
+                    <Spinner
+                        android:id="@+id/check_persion_spinner"
+                        style="@style/checkactivity_spinner_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="试剂厂商:" />
+
+                    <Spinner
+                        android:id="@+id/check_shiji_spinner"
+
+                        style="@style/checkactivity_spinner_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="样品名称:" />
+
+                    <Spinner
+                    android:id="@+id/check_sample_spinner"
+                    style="@style/checkactivity_spinner_style"
+                    android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_check_sample"
+                        style="@style/checkactivity_textview_style"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="检测项目:" />
+
+                    <Spinner
+                        android:id="@+id/check_project_spinner"
+                        style="@style/checkactivity_spinner_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="样品类型:" />
+
+                    <Spinner
+                        android:id="@+id/check_type_spinner"
+                        style="@style/checkactivity_spinner_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="商品来源:" />
+
+                    <Spinner
+                        android:id="@+id/checkactivity_sampleunit_spinner"
+                        style="@style/checkactivity_spinner_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="样品编号:" />
+
+                    <EditText
+                        android:id="@+id/checkactivity_et_SampleNum"
+                        style="@style/checkactivity_edittext_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="抽样时间:" />
+
+                    <EditText
+                        android:id="@+id/checkactivity_et_SampleTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:layout_marginRight="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="限量标准:" />
+
+                    <EditText
+                        android:id="@+id/check_edit_jcx"
+                        android:enabled="false"
+                        style="@style/checkactivity_edittext_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="临界值:" />
+
+                    <EditText
+                        android:id="@+id/check_edit_lin"
+                        android:enabled="false"
+                        style="@style/checkactivity_edittext_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="检测值:" />
+
+                    <EditText
+                        android:id="@+id/check_edit_value"
+                        android:enabled="false"
+                        style="@style/checkactivity_edittext_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/check_edit_tv_long"
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="样品浓度:" />
+
+                    <EditText
+                        android:id="@+id/check_edit_long"
+                        android:enabled="false"
+                        style="@style/checkactivity_edittext_style" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/checkactivity_textview_style"
+                        android:layout_marginRight="10dp"
+                        android:text="检测结果:" />
+
+                    <EditText
+                        android:id="@+id/check_edit_result"
+                        style="@style/checkactivity_edittext_style"
+                        android:enabled="false" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#999999" />
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btn_Imm_Check"
+                    style="@style/checkactivity_button_style"
+                    android:background="@drawable/main_change_btu_shape"
+                    android:onClick="ClickStart"
+                    android:text="即时检测" />
+
+                <Button
+                    style="@style/checkactivity_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_change_btu_shape"
+                    android:onClick="PrintInfo"
+                    android:text="打印数据" />
+
+                <Button
+                    android:id="@+id/move_time"
+                    style="@style/checkactivity_button_style"
+                    android:background="@drawable/main_change_btu_shape"
+                    android:text="定时检测" />
+
+                <Button
+                    android:id="@+id/upload_data"
+                    style="@style/checkactivity_button_style"
+                    android:background="@drawable/main_change_btu_shape"
+                    android:enabled="false"
+                    android:text="上传数据"
+                    />
+
+                <Button
+                    style="@style/checkactivity_button_style"
+                    android:background="@drawable/main_change_btu_shape"
+                    android:onClick="ClickBack"
+                    android:text="返回" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

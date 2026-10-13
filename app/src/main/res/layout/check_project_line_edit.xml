@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/check_project_line_project_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="显线金标编辑"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="检测项目:"
+                    android:textSize="18sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <EditText
+                    android:id="@+id/check_project_line_project_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="扫描起点:"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <EditText
+                    android:id="@+id/check_project_line_project_sao_start"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="扫描终点:"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <EditText
+                    android:id="@+id/check_project_line_project_sao_end"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/check_projetc_line_project_ct_tv"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="CT间距:"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <EditText
+                    android:id="@+id/check_project_line_project_ct"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/check_projetc_line_project_ct_width_tv"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="CT峰宽:"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <EditText
+                    android:id="@+id/check_project_line_project_ct_width"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="试剂厂商:"
+                    android:textSize="18sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <Spinner
+                    android:id="@+id/check_project_line_project_card_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="限量标准:"
+                    android:textSize="18sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <EditText
+                    android:id="@+id/check_project_line_project_xian"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:inputType="number|numberDecimal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="临界值:"
+                    android:textSize="18sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/THEME_COLOR"/>
+
+                <EditText
+                    android:id="@+id/check_project_line_project_ljz"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:inputType="number|numberDecimal"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="A1:"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/check_project_line_project_k"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3.0"
+                android:inputType="number|numberDecimal|numberSigned"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="A2:"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/check_project_line_project_b"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3.0"
+                android:inputType="number|numberDecimal|numberSigned"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="X0:"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/check_project_line_project_x"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3.0"
+                android:inputType="number|numberDecimal|numberSigned"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="P:"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/check_project_line_project_p"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3.0"
+                android:inputType="number|numberDecimal|numberSigned"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:text="浓度单位:"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/check_project_line_project_concentrate_unit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3.0"/>
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/THEME_COLOR"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="2"
+                    android:text="检测项目"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="扫描起点"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="扫描终点"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    android:id="@+id/check_projetc_line_project_sc_ct_tv"
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="CT间距"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    android:id="@+id/check_projetc_line_project_sc_ct_width_tv"
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="CT峰宽"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="限量标准"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="临界值"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="A1"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="A2"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="X0"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="P"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#e6e6e6"/>
+
+                <TextView
+                    style="@style/item_project_style"
+                    android:layout_weight="1"
+                    android:text="浓度单位"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6"/>
+
+            <ListView
+                android:id="@+id/check_project_line_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickClear"
+            android:text="清空全部数据"/>
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickDelete"
+            android:text="删除选中的数据"/>
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickSave"
+            android:text="保存编辑数据"/>
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickEdit"
+            android:text="增加编辑数据"/>
+
+        <Button
+            style="@style/btn_baseData_style"
+            android:onClick="ClickBack"
+            android:text="返回"/>
+    </LinearLayout>
+
+</LinearLayout>

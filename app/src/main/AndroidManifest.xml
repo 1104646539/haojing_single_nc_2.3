@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tnd.multifuction1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="com.tnd.multifuction1.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.tnd.jinbiao.activity.CheckActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.JbMainActivity" />
+        <activity android:name="com.tnd.activity.AppManagerActivity" />
+        <!--<activity android:name="com.tnd.FirstMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            &lt;!&ndash;usb设备权限授权&ndash;&gt;
+            &lt;!&ndash;<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter"/>&ndash;&gt;
+        </activity>-->
+        <activity android:name="com.tnd.multifuction1.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--usb设备权限授权-->
+            <!--<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter"/>-->
+        </activity>
+        <!--<activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />-->
+        <activity
+            android:name="com.tnd.multifuction1.activity.PesticideTestActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.PesticideTestActivity2"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.ResultQueryActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.FenGuangActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.SystemSettingActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.SystemSettingActivity2"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.LocationActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.UploadSettingActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.tnd.multifuction1.activity.ProjectActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name="com.tnd.multifuction1.activity.StatisticsActivity" />
+        <activity android:name="com.tnd.multifuction1.activity.DebugActivity" />
+        <activity android:name="com.tnd.jinbiao.activity.CheckProjectActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.SelectActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.ResultActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.ProjectManagerActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.CheckProjectLineActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.CheckProjectRoundActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.CheckProjectCompanyActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.CheckShiJiActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.NetWorkSetting"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.ProductActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.CheckResultPhotoActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.SampleLineActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.CheckSelectProjectActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.SampleActivity"></activity>
+        <activity android:name="com.tnd.jinbiao.activity.TypeActivity"></activity>
+        <activity
+            android:name="com.tnd.multifuction1.activity.SampleActivity"
+            android:screenOrientation="landscape" />
+
+        <receiver android:name="com.tnd.multifuction1.receiver.BootReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tnd.multifuction1.receiver.ShutdownBroadcastReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

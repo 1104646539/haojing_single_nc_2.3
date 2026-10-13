@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/title_color"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/dialog_edit_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="检测单位"
+            android:textColor="@color/text_black"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/dialog_edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/selector_btn_setting"
+            android:minWidth="200dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_gray_nr"
+        android:padding="2dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dialog_edit_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_edit_add"
+            style="@style/BtnBottom"
+            android:textSize="24sp"
+            android:text="增加" />
+
+        <Button
+            android:id="@+id/dialog_edit_change"
+            style="@style/BtnBottom"
+            android:textSize="24sp"
+            android:text="修改" />
+        <Button
+            android:id="@+id/dialog_edit_del"
+            style="@style/BtnBottom"
+            android:textSize="24sp"
+            android:text="删除" />
+
+        <Button
+            android:id="@+id/dialog_edit_cancel"
+            style="@style/BtnBottom"
+            android:textSize="24sp"
+            android:text="取消" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.lidroid.xutils"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+8        android:minSdkVersion="10"
+8-->F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:7:5-8:41
+9        android:targetSdkVersion="17" />
+9-->F:\androidproject\haojing\haojing_single_nc_2.3\xutils\src\main\AndroidManifest.xml:8:9-38
+10
+11</manifest>

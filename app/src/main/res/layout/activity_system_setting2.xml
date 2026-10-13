@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/title_color"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="20dp"
+        android:text="系统设置"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="单位/产地设置"
+                android:textColor="#666666"
+                android:textSize="26sp" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onBCheckOrg"
+                android:text="被检测单位" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onSampleSource"
+                android:text="商品来源(摊位)" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onCheckOrg"
+                android:text="检测单位" />
+
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onSampleSetting"
+                android:text="商品管理" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:onClick="onSampleName"
+                android:text="样品名称" />
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onEditProject"
+                android:visibility="gone"
+                android:text="项目设置" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="人员设置"
+                android:textColor="#666666"
+                android:textSize="26sp" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onInspector"
+                android:text="检测人员" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="上传设置"
+                android:layout_marginTop="15dp"
+                android:textColor="#666666"
+                android:textSize="26sp" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onUpLoadingSetting"
+                android:text="上传设置" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="参数设置"
+                android:textColor="#666666"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="农残检测时间"
+                    android:textColor="#333"
+                    android:textSize="26sp" />
+
+                <com.tnd.multifuction1.view.AutoConintaEditText
+                    android:id="@+id/et_card_warm_time"
+                    style="@style/btnSystemSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    app:unit="s"></com.tnd.multifuction1.view.AutoConintaEditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="卡片反应时间"
+                    android:textColor="#333"
+                    android:textSize="26sp" />
+
+                <com.tnd.multifuction1.view.AutoConintaEditText
+                    android:id="@+id/et_card_reaction_time"
+                    style="@style/btnSystemSetting"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    app:unit="s"></com.tnd.multifuction1.view.AutoConintaEditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="分光反应时间"
+                    android:textColor="#333"
+                    android:textSize="26sp" />
+
+                <com.tnd.multifuction1.view.AutoConintaEditText
+                    android:id="@+id/et_fenguang_reaction_time"
+                    style="@style/btnSystemSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="30dp"
+                    app:unit="s"></com.tnd.multifuction1.view.AutoConintaEditText>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="设备名称"
+                    android:textColor="#333"
+                    android:textSize="26sp" />
+
+                <com.tnd.multifuction1.view.AutoConintaEditText
+                    android:id="@+id/et_asset_name"
+                    style="@style/btnSystemSetting"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    ></com.tnd.multifuction1.view.AutoConintaEditText>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="设备编码"
+                    android:textColor="#333"
+                    android:textSize="26sp" />
+
+                <com.tnd.multifuction1.view.AutoConintaEditText
+                    android:id="@+id/et_asset_code"
+                    style="@style/btnSystemSetting"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    ></com.tnd.multifuction1.view.AutoConintaEditText>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="打印设置"
+                android:textColor="#666666"
+                android:textSize="26sp" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onCheck"
+                android:text="检测" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onDataManager"
+                android:text="数据管理" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <CheckBox
+                    android:id="@+id/et_print_code"
+                    style="@style/checkbox_null_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="2dp"
+                    android:text="是否打印二维码"
+                    android:textSize="26sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="标准设置"
+                android:textColor="#666666"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="限量值"
+                    android:textColor="#333"
+                    android:textSize="26sp" />
+
+                <com.tnd.multifuction1.view.AutoConintaEditText
+                    android:id="@+id/et_standard_value"
+                    style="@style/btnSystemSetting"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    app:unit="%"></com.tnd.multifuction1.view.AutoConintaEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="限量标准"
+                    android:textColor="#333"
+                    android:textSize="26sp" />
+
+                <com.tnd.multifuction1.view.AutoConintaEditText
+                    android:id="@+id/et_test_standard"
+                    style="@style/btnSystemSetting"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"></com.tnd.multifuction1.view.AutoConintaEditText>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="其他设置"
+                android:id="@+id/order_setting"
+                android:textColor="#666666"
+                android:textSize="26sp" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onCalibration"
+                android:text="校准" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onOutOrIn"
+                android:visibility="gone"
+                android:text="进出卡" />
+
+            <Button
+                style="@style/btnSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:onClick="onUpdate"
+                android:text="软件升级" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

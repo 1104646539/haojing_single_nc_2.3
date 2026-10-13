@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/title_color"
+        android:gravity="center"
+        android:text="商品管理"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="商品编码"
+            android:textColor="@color/text_black"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btnSystemSetting"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="商品名称"
+            android:textColor="@color/text_black"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/btnSystemSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="商品类别"
+            android:textColor="@color/text_black"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/et_type"
+            style="@style/btnSystemSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="400dp">
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/BtnBottom"
+            android:text="保存" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/BtnBottom"
+            android:text="取消" />
+    </LinearLayout>
+</LinearLayout>

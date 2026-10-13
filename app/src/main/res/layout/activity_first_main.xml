@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg1" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#019b79"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/main_activit_title"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_open_1"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:background="@drawable/check_selector"
+                android:text="@string/nongCanButton"
+                android:textColor="#ffffff"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/btn_open_2"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/check_selector"
+                android:text="@string/duoGongNengButton"
+                android:textColor="#ffffff"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/btn_open_3"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/check_selector"
+                android:text="@string/jinBiaoButton"
+                android:textColor="#ffffff"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_open_4"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/check_selector"
+                android:text="@string/ATPButton"
+                android:textColor="#ffffff"
+                android:textSize="50sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/text"
+            android:layout_width="213dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="@mipmap/text" />
+
+        <TextView
+            android:id="@+id/text_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="中国所有的农口事业单位、企业SN:"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</RelativeLayout>

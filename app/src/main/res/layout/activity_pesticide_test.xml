@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:theme="@style/ToolBarTheme"
+            android:background="@color/title_color"
+            android:fitsSystemWindows="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="-5dp"
+            android:paddingRight="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+            <TextView
+                android:id="@+id/txt_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="卡片检测"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:visibility="visible" />
+        </android.support.v7.widget.Toolbar>
+        <!--<TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/title_color"
+            android:paddingLeft="10dp"
+            android:text="卡片检测"
+            android:textColor="@android:color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/title_color"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:textSize="32sp" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="对照值:"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_compare_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <include layout="@layout/checked_org_input" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="全选"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="样品名称"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:text="抑制率及颜色"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="检测结果"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="样品名称"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:text="抑制率及颜色"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="检测结果"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_A1"
+                        style="@style/CheckBoxTest"
+                        android:text="A1" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A1_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A1_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A1_result"
+                        style="@style/EditTextResultShow" />
+
+                    <CheckBox
+                        android:id="@+id/cb_A7"
+                        style="@style/CheckBoxTest"
+                        android:text="A7" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A7_sample_name"
+                        style="@style/EditTextResultShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A7_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A7_result"
+                        style="@style/EditTextResultShow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_A2"
+                        style="@style/CheckBoxTest"
+                        android:text="A2" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A2_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A2_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A2_result"
+                        style="@style/EditTextResultShow" />
+
+                    <CheckBox
+                        android:id="@+id/cb_A8"
+                        style="@style/CheckBoxTest"
+                        android:text="A8" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A8_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A8_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A8_result"
+                        style="@style/EditTextResultShow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_A3"
+                        style="@style/CheckBoxTest"
+                        android:text="A3" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A3_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A3_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A3_result"
+                        style="@style/EditTextResultShow" />
+
+                    <CheckBox
+                        android:id="@+id/cb_A9"
+                        style="@style/CheckBoxTest"
+                        android:text="A9" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A9_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A9_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A9_result"
+                        style="@style/EditTextResultShow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_A4"
+                        style="@style/CheckBoxTest"
+                        android:text="A4" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A4_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A4_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A4_result"
+                        style="@style/EditTextResultShow" />
+
+                    <CheckBox
+                        android:id="@+id/cb_A10"
+                        style="@style/CheckBoxTest"
+                        android:text="A10" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A10_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A10_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A10_result"
+                        style="@style/EditTextResultShow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_A5"
+                        style="@style/CheckBoxTest"
+                        android:text="A5" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A5_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A5_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A5_result"
+                        style="@style/EditTextResultShow" />
+
+                    <CheckBox
+                        android:id="@+id/cb_A11"
+                        style="@style/CheckBoxTest"
+                        android:text="A11" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A11_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A11_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A11_result"
+                        style="@style/EditTextResultShow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_A6"
+                        style="@style/CheckBoxTest"
+                        android:text="A6" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A6_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A6_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A6_result"
+                        style="@style/EditTextResultShow" />
+
+                    <CheckBox
+                        android:id="@+id/cb_A12"
+                        style="@style/CheckBoxTest"
+                        android:text="A12" />
+
+                    <com.tnd.multifuction1.view.MaskedEditText
+                        android:id="@+id/et_A12_sample_name"
+                        style="@style/EditTextShow"
+                        app:maskIcon="@drawable/ic_select1" />
+
+                    <EditText
+                        android:id="@+id/et_A12_value"
+                        style="@style/EditTextResultShow" />
+
+                    <EditText
+                        android:id="@+id/et_A12_result"
+                        style="@style/EditTextResultShow" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_current_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="实时温度："
+                        android:textColor="@android:color/black"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_compare"
+                        style="@style/BtnBottom"
+                        android:text="对照" />
+
+                    <Button
+                        android:id="@+id/btn_test"
+                        style="@style/BtnBottom"
+                        android:text="检测" />
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/btn_open_close_lid"
+                        style="@style/BtnBottom"
+                        android:text="开关盖" />
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/btn_out_in_card"
+                        style="@style/BtnBottom"
+                        android:text="进出卡" />
+
+                    <Button
+                        android:id="@+id/btn_upload"
+                        style="@style/BtnBottom"
+                        android:text="上传" />
+
+                    <Button
+                        android:id="@+id/btn_print"
+                        style="@style/BtnBottom"
+                        android:text="打印" />
+
+                    <Button
+                        android:id="@+id/btn_return"
+                        style="@style/BtnBottom"
+                        android:text="返回" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

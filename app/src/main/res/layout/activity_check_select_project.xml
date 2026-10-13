@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/THEME_COLOR"
+        android:gravity="center"
+        android:text="样品检测"
+        android:textColor="#ffffff"
+        android:textSize="28sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="50dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_change_btu_shape"
+            android:onClick="ClickLin"
+            android:text="定量检测"
+            android:textSize="30sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="50dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_change_btu_shape"
+            android:onClick="ClickDinXin"
+            android:text="定性检测"
+            android:textSize="30sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="50dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_change_btu_shape"
+            android:onClick="ClickExit"
+            android:text="返回"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</RelativeLayout>

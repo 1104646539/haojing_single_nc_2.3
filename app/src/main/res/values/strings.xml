@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">农药残留检测仪</string>
+    <string name="excel_name">t_bianmabiao2.xls</string>
+    <string name="dis_numberaz">1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_</string>
+    <string name="upload_url">http://eco.ahau.edu.cn/jc/dtrans</string>
+
+    <string name="query_data_count">"共查询到(%1$d)条数据</string>
+    <string name="contrastValue">对照值:</string>
+    <string name="uploding_hint">当前版本为0.0，最新版本为111，是否进行升级？</string>
+    <string name="main_activit_title">多功能食品安全检测仪</string>
+    <string name="nongCanButton">农药残留</string>
+    <string name="duoGongNengButton">非法添加</string>
+    <string name="jinBiaoButton">兽药残留</string>
+    <string name="ATPButton">ATP荧光检测</string>
+    <string name="title">胶体金检测仪</string>
+    <array name="result_judge">
+        <item>合格</item>
+        <item>不合格</item>
+    </array>
+
+    <array name="upload_state">
+        <item>已上传</item>
+        <item>未上传</item>
+    </array>
+
+    <string-array name="check_company_name">
+        <item>阳性</item>
+        <item>阴性</item>
+        <item>无效</item>
+    </string-array>
+
+    <string-array name="project_bochang">
+        <item>535</item>
+        <item>410</item>
+        <item>590</item>
+    </string-array>
+</resources>
