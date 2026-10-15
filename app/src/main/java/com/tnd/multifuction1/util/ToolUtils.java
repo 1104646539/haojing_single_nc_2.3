@@ -34,6 +34,7 @@ import com.tnd.multifuction1.model.Project;
 import com.tnd.multifuction1.model.SampleSource;
 import com.tnd.multifuction1.resource.SPResource;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class ToolUtils {
@@ -1027,7 +1028,6 @@ public class ToolUtils {
     // "product_num":"716","item_weight":0,"item_id":1,"product_name":"",
     // "company_bjdw":"","data_value":12,"data_conclusion":"","data_dispose":"",
     // "create_time":"2017/5/25 9:59:01","data_image":"","channel":0}
-
     public static String assemblyUploadData(CheckResult result) {
         String ss = "";
         JSONObject json = new JSONObject();
@@ -1035,91 +1035,51 @@ public class ToolUtils {
         if (TextUtils.isEmpty(Global.uploadUrl)) {
             return null;
         }
-//        try {
-//            json.put("count", "1");
-//            json.put("jczbh", Global.TESTING_UNIT_NUMBER);
-//            json.put("jcdw", Global.TESTING_UNIT_NAME);
-//            JSONObject detail = new JSONObject();
-//            detail.put("rwbh", "");
-//            detail.put("bjdw", result.bcheckedOrganization + "");
-//            detail.put("jcxm", result.projectName + "");
-//            detail.put("jcdt", ToolUtils.dateToString(new Date(result.testTime),"yyyy-MM-dd HH:mm:ss")+ "");
-//            detail.put("jcz", result.testValue + "");
-//            detail.put("szdw", "%");
-////            detail.put("jgpd", result.resultJudge + "合格");
-//            detail.put("jgpd",  result.resultJudge+"");
-//            detail.put("ybbh", result.sampleNum + "");
-//            detail.put("ybmc", result.sampleName + "");
-//            detail.put("ybcd", result.sampleSource + "");
-//            detail.put("xlbz", result.testStandard + "");
-//            detail.put("sbbh", Global.device_id + "");
-//            detail.put("xlz", result.xlz + "");
-//            JSONArray jsonArray = new JSONArray();
-//            jsonArray.put(detail);
-//            json.put("details", jsonArray);
-//            ss =  json.toString();
-//            Log.d(TAG, "uploadData=" + ss);
-//            return ss;
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
         try {
-//            json.put("cmd", "3");
-//            json.put("username", Global.TESTING_UNIT_NUMBER);
-//            json.put("password", Global.TESTING_UNIT_NAME);
-//            JSONObject detail = new JSONObject();
-//            detail.put("spdm", result.id);
-//            detail.put("spmc", result.sampleName + "");
-//            detail.put("jcxm", result.projectName + "");
-//            detail.put("xmmc", result.projectName);
-//            detail.put("jcz", result.testValue + "");
-//            detail.put("jcjg", result.resultJudge);
-////            detail.put("jgpd", result.resultJudge + "合格");
-//            detail.put("jcrq", ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss") + "");
-//            detail.put("twh", result.sampleNum + "");
-//            detail.put("weight", result.weight + "");
-//            detail.put("cljg", result.resultJudge + "");
-//            JSONArray jsonArray = new JSONArray();
-//            jsonArray.put(detail);
-//            json.put("items", jsonArray);
-//            ss = json.toString();
-//            Log.d(TAG, "uploadData=" + ss);
-
             String jg = result.resultJudge;
-            if (!jg.equals("合格") && !jg.equals("不合格")) {
-                jg = "合格";
-            }
+            int jcjg = 0;
             if (jg.equals("阴性")) {
                 jg = "合格";
             } else if (jg.equals("阳性")){
                 jg = "不合格";
+            }else{
+                if (!jg.equals("合格") && !jg.equals("不合格")) {
+                    jg = "合格";
+                }
             }
-
-            String bjdw = result.bcheckedOrganization == null ? "" : result.bcheckedOrganization;
-            String ybcd = result.sampleSource == null ? "" : result.sampleSource;
-            String weight = result.weight == null ? "" : result.weight;
+            if(jg.equals("合格")){
+                jcjg = 1;
+            }else{
+                jcjg = 0;
+            }
+            String weight = result.weight;
+            if (weight.isEmpty()) {
+                weight = "1";
+            }
             String jcz = result.testValue;
-            if (!isNumericZidai(jcz)) {
+            /*if (!isNumericZidai(jcz)) {
                 jcz = "0";
-            }
+            }*/
+            String cmd = tokenTest.generate("username="+Global.TESTING_UNIT_NAME+"&password="+Global.TESTING_UNIT_NUMBER);
 
-            String jcz1 = isNumeric(result.testValue);
+            JSONArray jsonArray = new JSONArray();
+            JSONObject item = new JSONObject();
+            item.put("stall",result.sampleSource);
+            item.put("alias",result.sampleName);
+            item.put("jcxm",result.projectName);
+            item.put("jcz",jcz);
+            item.put("jcjg",jcjg);//0=阳性；1=阴性
+            item.put("jcrq",ToolUtils.long2String(result.testTime, "yyyy-MM-dd HH:mm:ss"));
+            item.put("weight",Double.parseDouble(weight));
+            item.put("jcfs",2);//1=试剂条检测；2=快检仪检测；9=其他检测方式
+            jsonArray.put(item);
+            json.put("username", Global.TESTING_UNIT_NAME);
+            json.put("cmd",cmd);
+            json.put("deviceName", Global.ASSET_NAME);
+            json.put("deviceCode", Global.ASSET_CODE);
+            json.put("items", jsonArray);
 
-//data=有机氯%23苹果%23<0.1%23mg/kg%23合格%23GB2763-2019%23德州金锣肉制品有限公司%23%23STD-9000%232021-03-11 10:43:42%23e57ae626cc24176f%231.0mg/kg%23123%23%23|
-//            ss=result.projectName+"%23"+result.sampleName+"%23"+jcz1+"%23"+"%25"+"%23"+jg+"%23"+result.testStandard+"%23"+bcheckedOrganization+"%23"+checkedOrganization+"%23"+Global.ASSET_NAME+"%23"+ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss")+"%23"+Global.ASSET_CODE+"%23"+"50"+"%23"+result.sampleNum+"%23"+sampleID+"%23"+"|";
-            ss = "{" + "cmd:'" + "3" + "'," + "username:'" + Global.TESTING_UNIT_NAME + "'," + "password:'" + Global.TESTING_UNIT_NUMBER + "'," + "items:[{"
-                    + "spdm:'" + DbHelper.getSampleNumber(result.sampleName).replace(" ", "") + "" + "'," + "spmc:'" + result.sampleName + "" + "'," + "jcxm:'" + result.projectName + "" + "',"
-                    + "xmmc:'" + "13" + "" + "'," + "jcz:'" + jcz + "" + "'," + "jcjg:'" + jg + "" + "',"
-                    + "jcrq:'" + ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss") + "" + "'," + "twh:'" + (result.twh == null ? "" : result.twh) + "" + "',"
-                    + "bjdw:'" + bjdw + "'," + "ybcd:'" + ybcd + "'," + "weight:'" + weight + "'," + "cljg:'" + jg + ""
-                    + "'}]" + "}";
-//            ss = "{" + "cmd:'" + "3" + "'," + "username:'" + Global.TESTING_UNIT_NUMBER + "'," + "password:'" + Global.TESTING_UNIT_NAME + "'," + "items:[{"
-//                    + "spdm:'" + result.sampleNum+ "" + "'," + "spmc:'" + URLEncoder.encode(result.sampleName, "gb2312") + "" + "',"
-//                    + "jcxm:'" + URLEncoder.encode(result.projectName, "GB2312") + "" + "',"
-//                    + "xmmc:'" + "13" + "" + "'," + "jcz:'" + jcz + "" + "'," + "jcjg:'" + URLEncoder.encode(jg, "gb2312") + "" + "',"
-//                    + "jcrq:'" + ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss") + "" + "'," + "twh:'" + result.twh + "" + "',"
-//                    + "weight:'" + weight + "" + "'," + "cljg:'" + URLEncoder.encode(jg, "gb2312") + ""
-//                    + "'}]" + "}";
+            ss = json.toString();
 
             Log.d(TAG, "uploadData=" + ss);
 
@@ -1130,6 +1090,108 @@ public class ToolUtils {
 
         return null;
     }
+//    public static String assemblyUploadData(CheckResult result) {
+//        String ss = "";
+//        JSONObject json = new JSONObject();
+//        Log.d(TAG, "assemblyUploadData uploadUrl= " + Global.uploadUrl);
+//        if (TextUtils.isEmpty(Global.uploadUrl)) {
+//            return null;
+//        }
+////        try {
+////            json.put("count", "1");
+////            json.put("jczbh", Global.TESTING_UNIT_NUMBER);
+////            json.put("jcdw", Global.TESTING_UNIT_NAME);
+////            JSONObject detail = new JSONObject();
+////            detail.put("rwbh", "");
+////            detail.put("bjdw", result.bcheckedOrganization + "");
+////            detail.put("jcxm", result.projectName + "");
+////            detail.put("jcdt", ToolUtils.dateToString(new Date(result.testTime),"yyyy-MM-dd HH:mm:ss")+ "");
+////            detail.put("jcz", result.testValue + "");
+////            detail.put("szdw", "%");
+//////            detail.put("jgpd", result.resultJudge + "合格");
+////            detail.put("jgpd",  result.resultJudge+"");
+////            detail.put("ybbh", result.sampleNum + "");
+////            detail.put("ybmc", result.sampleName + "");
+////            detail.put("ybcd", result.sampleSource + "");
+////            detail.put("xlbz", result.testStandard + "");
+////            detail.put("sbbh", Global.device_id + "");
+////            detail.put("xlz", result.xlz + "");
+////            JSONArray jsonArray = new JSONArray();
+////            jsonArray.put(detail);
+////            json.put("details", jsonArray);
+////            ss =  json.toString();
+////            Log.d(TAG, "uploadData=" + ss);
+////            return ss;
+////        } catch (Exception e) {
+////            e.printStackTrace();
+////        }
+//        try {
+////            json.put("cmd", "3");
+////            json.put("username", Global.TESTING_UNIT_NUMBER);
+////            json.put("password", Global.TESTING_UNIT_NAME);
+////            JSONObject detail = new JSONObject();
+////            detail.put("spdm", result.id);
+////            detail.put("spmc", result.sampleName + "");
+////            detail.put("jcxm", result.projectName + "");
+////            detail.put("xmmc", result.projectName);
+////            detail.put("jcz", result.testValue + "");
+////            detail.put("jcjg", result.resultJudge);
+//////            detail.put("jgpd", result.resultJudge + "合格");
+////            detail.put("jcrq", ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss") + "");
+////            detail.put("twh", result.sampleNum + "");
+////            detail.put("weight", result.weight + "");
+////            detail.put("cljg", result.resultJudge + "");
+////            JSONArray jsonArray = new JSONArray();
+////            jsonArray.put(detail);
+////            json.put("items", jsonArray);
+////            ss = json.toString();
+////            Log.d(TAG, "uploadData=" + ss);
+//
+//            String jg = result.resultJudge;
+//            if (!jg.equals("合格") && !jg.equals("不合格")) {
+//                jg = "合格";
+//            }
+//            if (jg.equals("阴性")) {
+//                jg = "合格";
+//            } else if (jg.equals("阳性")){
+//                jg = "不合格";
+//            }
+//
+//            String bjdw = result.bcheckedOrganization == null ? "" : result.bcheckedOrganization;
+//            String ybcd = result.sampleSource == null ? "" : result.sampleSource;
+//            String weight = result.weight == null ? "" : result.weight;
+//            String jcz = result.testValue;
+//            if (!isNumericZidai(jcz)) {
+//                jcz = "0";
+//            }
+//
+//            String jcz1 = isNumeric(result.testValue);
+//
+////data=有机氯%23苹果%23<0.1%23mg/kg%23合格%23GB2763-2019%23德州金锣肉制品有限公司%23%23STD-9000%232021-03-11 10:43:42%23e57ae626cc24176f%231.0mg/kg%23123%23%23|
+////            ss=result.projectName+"%23"+result.sampleName+"%23"+jcz1+"%23"+"%25"+"%23"+jg+"%23"+result.testStandard+"%23"+bcheckedOrganization+"%23"+checkedOrganization+"%23"+Global.ASSET_NAME+"%23"+ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss")+"%23"+Global.ASSET_CODE+"%23"+"50"+"%23"+result.sampleNum+"%23"+sampleID+"%23"+"|";
+//            ss = "{" + "cmd:'" + "3" + "'," + "username:'" + Global.TESTING_UNIT_NAME + "'," + "password:'" + Global.TESTING_UNIT_NUMBER + "'," + "items:[{"
+//                    + "spdm:'" + DbHelper.getSampleNumber(result.sampleName).replace(" ", "") + "" + "'," + "spmc:'" + result.sampleName + "" + "'," + "jcxm:'" + result.projectName + "" + "',"
+//                    + "xmmc:'" + "13" + "" + "'," + "jcz:'" + jcz + "" + "'," + "jcjg:'" + jg + "" + "',"
+//                    + "jcrq:'" + ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss") + "" + "'," + "twh:'" + (result.twh == null ? "" : result.twh) + "" + "',"
+//                    + "bjdw:'" + bjdw + "'," + "ybcd:'" + ybcd + "'," + "weight:'" + weight + "'," + "cljg:'" + jg + ""
+//                    + "'}]" + "}";
+////            ss = "{" + "cmd:'" + "3" + "'," + "username:'" + Global.TESTING_UNIT_NUMBER + "'," + "password:'" + Global.TESTING_UNIT_NAME + "'," + "items:[{"
+////                    + "spdm:'" + result.sampleNum+ "" + "'," + "spmc:'" + URLEncoder.encode(result.sampleName, "gb2312") + "" + "',"
+////                    + "jcxm:'" + URLEncoder.encode(result.projectName, "GB2312") + "" + "',"
+////                    + "xmmc:'" + "13" + "" + "'," + "jcz:'" + jcz + "" + "'," + "jcjg:'" + URLEncoder.encode(jg, "gb2312") + "" + "',"
+////                    + "jcrq:'" + ToolUtils.dateToString(new Date(result.testTime), "yyyy-MM-dd HH:mm:ss") + "" + "'," + "twh:'" + result.twh + "" + "',"
+////                    + "weight:'" + weight + "" + "'," + "cljg:'" + URLEncoder.encode(jg, "gb2312") + ""
+////                    + "'}]" + "}";
+//
+//            Log.d(TAG, "uploadData=" + ss);
+//
+//            return ss;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return null;
+//    }
 
     public static boolean isNumericZidai(String str) {
         for (int i = 0; i < str.length(); i++) {

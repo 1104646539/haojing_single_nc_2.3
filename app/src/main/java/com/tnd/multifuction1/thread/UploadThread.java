@@ -166,8 +166,8 @@ public class UploadThread extends Thread {
 //                APPUtils.showToast((Activity) context, content);
                     OkHttpClient okHttpClient = new OkHttpClient();
 
-                    MediaType FORM_CONTENT_TYPE = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
-                    RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, "result=" + content);
+                    MediaType FORM_CONTENT_TYPE = MediaType.parse("application/json; charset=utf-8");
+                    RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE,  content);
 //                RequestBody requestBody = new FormBody.Builder()
 //                        .add("result", content)
 //                        .build();
@@ -191,7 +191,7 @@ public class UploadThread extends Thread {
                             String result = response.body().string();
                             Log.d("quanzhou",result);
                             if (listener != null) {
-                                if (result.contains("上传成功")) {
+                                if (result.contains("200")) {
                                     listener.onSuccess(list, 1, finalI, result);
                                 } else {
                                     listener.onFail(result);
